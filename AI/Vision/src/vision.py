@@ -42,40 +42,40 @@ servo = Servo(CALIB_TILT, PAN)
 # Calibrates the vision.
 main.MainCalibration()
 if args.step:
-	main.StepCalibration()
+    main.StepCalibration()
 if args.swerve:
-	main.SwerveCalibration()
+    main.SwerveCalibration()
 
 # Changes head position.
 Servo.writeWord(19, 30, RUN_TILT)
 
 # Creates a window to show the robots vision.
 if args.show:
-	cv2.namedWindow('Robot\'s Vision.')
+    cv2.namedWindow('Robot\'s Vision.')
 
 while True:
-	# Capture a frame from the camera.
-	main.capture()
+    # Capture a frame from the camera.
+    main.capture()
 
-	# Copies the frame.
-	if args.show:
-		res = cv2.repeat(main.img, 1, 1)
-	else:
-		res = None
+    # Copies the frame.
+    if args.show:
+        res = cv2.repeat(main.img, 1, 1)
+    else:
+        res = None
 
-	# Executes the functions.
-	M = main.MainRunning(res)
-	if args.step:
-		S = main.StepRunning(res)
-	if args.swerve:
-		W = main.SwerveRunning(res)
+    # Executes the functions.
+    M = main.MainRunning(res)
+    if args.step:
+        S = main.StepRunning(res)
+    if args.swerve:
+        W = main.SwerveRunning(res)
 
-	# Refreshes the window.
-	if args.show:
-		cv2.imshow('Robot\'s Vision.', cv2.resize(res, (int(len(res[0]) * main.scl), int(len(res) * main.scl))))
+    # Refreshes the window.
+    if args.show:
+        cv2.imshow('Robot\'s Vision.', cv2.resize(res, (int(len(res[0]) * main.scl), int(len(res) * main.scl))))
 
-	# Prints the values.
-	print "Main:", M,
+    # Prints the values.
+    print "Main:", M,
     if x == 1:
         print "- Step:", St,
     if x == 2:
@@ -86,7 +86,7 @@ while True:
 
 
     # Press 'q' to exit.
-	if cv2.waitKey(20) & 0xFF == ord('q'):
+    if cv2.waitKey(20) & 0xFF == ord('q'):
         break
 
 cv2.destroyAllWindows()
