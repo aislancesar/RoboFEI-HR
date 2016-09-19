@@ -162,6 +162,7 @@ class RunVision:
                 # Paints the mask into the image.
                 res = cv2.bitwise_and(self.img, self.img, mask=nmask)
                 try:
+                    print "Trying"
                     # Finds the contours on the mask.
                     ret = cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
                     if len(ret) == 3:
@@ -170,20 +171,27 @@ class RunVision:
                         contours, _ = ret
                     else:
                         print "cv2.findContours didn't worked as planned, returning", len(ret), "variables."
+                    print "Contours"
                     # Computes the areas of the contours.
                     areas = [cv2.contourArea(c) for c in contours]
+                    print "areas"
                     # Finds the biggest area.
                     max_index = np.argmax(areas)
+                    print "Maxed"
                     # Gets the contour with the biggest area.
                     cnt=contours[max_index]
+                    print "Got the Max"
                     # Computs the moments of the contour.
                     M = cv2.moments(cnt)
+                    print "Moments"
                     # Computes the centroid of the contour.
                     cx = int(M['m10']/M['m00'])
                     cy = int(M['m01']/M['m00'])
+                    print "Centered"
                     # Draws a circle in the middle of the contour.
                     cv2.circle(res, (cx, cy), int(len(res)/30), [0,255,0], -1)
                 except:
+                    print "Something is mainly not working"
                     pass
                 # Draws a small circle around the mouse.
                 cv2.circle(res, self.pos, self.rad, [255,255,0], 2)

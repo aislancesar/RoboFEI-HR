@@ -38,7 +38,7 @@ main = RunVision()
 bkb.write_int(Mem, 'DECISION_ACTION_A', 0)
 
 # Initializes the head's control.
-servo = Servo(PAN, CALIB_TILT)
+servo = Servo(CALIB_TILT, PAN)
 
 # Calibrates the vision.
 main.MainCalibration()
