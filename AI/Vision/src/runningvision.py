@@ -164,7 +164,7 @@ class RunVision:
                 try:
                     # Finds the contours on the mask.
                     ret = cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-                    if len(ret) == 3:
+                    if len(ret) == 3: 
                         _, contours, _ = ret
                     elif len(ret) == 2:
                         contours, _ = ret
