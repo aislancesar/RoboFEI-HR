@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/control.dir/Linux/project/control/main.cpp.o  -o control -rdynamic liblibcontrol.so ../Blackboard/libblackboard.so ../../Control/Linux/lib/darwin.a -Wno-write-strings -lpthread -lboost_program_options -Wl,-rpath,/home/aislan/RoboFEI-HT_Debug/AI/build/Control:/home/aislan/RoboFEI-HT_Debug/AI/build/Blackboard 

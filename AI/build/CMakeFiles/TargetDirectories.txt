@@ -1,0 +1,9 @@
+/home/aislan/RoboFEI-HT_Debug/AI/build/Blackboard/CMakeFiles/blackboard.dir
+/home/aislan/RoboFEI-HT_Debug/AI/build/Blackboard/CMakeFiles/blackboardpy.dir
+/home/aislan/RoboFEI-HT_Debug/AI/build/IMU/CMakeFiles/comms.dir
+/home/aislan/RoboFEI-HT_Debug/AI/build/Communication/CMakeFiles/communication.dir
+/home/aislan/RoboFEI-HT_Debug/AI/build/Control/CMakeFiles/control.dir
+/home/aislan/RoboFEI-HT_Debug/AI/build/IMU/CMakeFiles/imu.dir
+/home/aislan/RoboFEI-HT_Debug/AI/build/Control/CMakeFiles/libcontrol.dir
+/home/aislan/RoboFEI-HT_Debug/AI/build/IMU/CMakeFiles/registers.dir
+/home/aislan/RoboFEI-HT_Debug/AI/build/Vision/CMakeFiles/vision.dir

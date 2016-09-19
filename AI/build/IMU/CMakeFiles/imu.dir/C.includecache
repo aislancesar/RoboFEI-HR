@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../IMU/include/ini.h
+stdio.h
+-
+
+/home/aislan/RoboFEI-HT_Debug/AI/IMU/src/ini.c
+stdio.h
+-
+ctype.h
+-
+string.h
+-
+ini.h
+/home/aislan/RoboFEI-HT_Debug/AI/IMU/src/ini.h
+stdlib.h
+-
+

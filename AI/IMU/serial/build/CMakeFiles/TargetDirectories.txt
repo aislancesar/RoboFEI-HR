@@ -1,0 +1,2 @@
+/home/aislan/RoboFEI-HT_Debug/AI/IMU/serial/build/CMakeFiles/serial.dir
+/home/aislan/RoboFEI-HT_Debug/AI/IMU/serial/build/CMakeFiles/serial_example.dir
