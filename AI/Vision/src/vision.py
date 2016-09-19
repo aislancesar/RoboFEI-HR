@@ -89,7 +89,7 @@ while True:
     if STATE == 0 and M[0] > len(main.img[0])/3 and M[0] < 2 * len(main.img[0])/3:
         print "Move Forward!"
         STATE = 1
-        bkb.write_int(Mem, 'DECISION_ACTION_A', 8)
+        bkb.write_int(Mem, 'DECISION_ACTION_A', 1)
     elif STATE == 1:
         if M[0] == -1:
             print "Stop!"
@@ -107,16 +107,20 @@ while True:
         if M[0] > len(main.img[0])/2:
             print "Walk Forward!"
             STATE = 1
-            bkb.write_int(Mem, 'DECISION_ACTION_A', 8)
+            bkb.write_int(Mem, 'DECISION_ACTION_A', 1)
     elif STATE == 3:
         if M[0] < len(main.img[0])/2:
             print "Walk Forward!"
             STATE = 1
-            bkb.write_int(Mem, 'DECISION_ACTION_A', 8)
+            bkb.write_int(Mem, 'DECISION_ACTION_A', 1)
 
     # Press 'q' to exit.
-    if cv2.waitKey(20) & 0xFF == ord('q'):
+    # Press 'r' to Run Again
+    k = cv2.waitKey(20) & 0xFF 
+    if k == ord('q'):
         break
+    if k == ord('r'):
+        STATE = 0
 
 cv2.destroyAllWindows()
 
