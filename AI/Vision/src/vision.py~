@@ -1,6 +1,6 @@
-PAN = 512 # Centralizes camera horizontally.
-CALIB_TILT = 700 # Centralizes camera vertically for calibration.
-RUN_TILT = 800 # Position to be used while running.
+PAN = 507 # Centralizes camera horizontally.
+CALIB_TILT = 750 # Centralizes camera vertically for calibration.
+RUN_TILT = 750 # Position to be used while running.
 
 import sys
 sys.path.append('../../Blackboard/src/')
@@ -86,33 +86,22 @@ while True:
     print
 
     # --- DECISION PROCESS ---
-    if STATE == 0 and M[0] > len(main.img[0])/3 and M[0] < 2 * len(main.img[0])/3:
-        print "Move Forward!"
+    if STATE == 0:
         STATE = 1
-        bkb.write_int(Mem, 'DECISION_ACTION_A', 1)
-    elif STATE == 1:
+
+    if STATE == 1:
         if M[0] == -1:
-            print "Stop!"
             STATE = 4
-            bkb.write_int(Mem, 'DECISION_ACTION_A', 0)
-        elif M[0] < len(main.img[0])/3:
-            print "Turn Left!"
-            STATE = 2
-            bkb.write_int(Mem, 'DECISION_ACTION_A', 2)
-        elif M[0] > 2*len(main.img[0])/3:
-            print "Turn Right!"
-            STATE = 3
-            bkb.write_int(Mem, 'DECISION_ACTION_A', 3)
-    elif STATE == 2:
-        if M[0] > len(main.img[0])/2:
-            print "Walk Forward!"
-            STATE = 1
-            bkb.write_int(Mem, 'DECISION_ACTION_A', 1)
-    elif STATE == 3:
-        if M[0] < len(main.img[0])/2:
-            print "Walk Forward!"
-            STATE = 1
-            bkb.write_int(Mem, 'DECISION_ACTION_A', 1)
+            
+        print "Walk Forward!"
+        bkb.write_float(Mem, 'VISION_OPP01_DIST', 0)
+        bkb.write_float(Mem, 'VISION_OPP02_DIST', 0)
+        bkb.write_float(Mem, 'VISION_OPP03_DIST', float (60 * (len(main.img[0])/2 - M[0]) / len(main.img[0])))
+        bkb.write_int(Mem, 'DECISION_ACTION_A', 21)
+    
+    if STATE == 4:
+        print "Stop!"
+        bkb.write_int(Mem, 'DECISION_ACTION_A', 0)
 
     # Press 'q' to exit.
     # Press 'r' to Run Again
@@ -120,8 +109,7 @@ while True:
     if k == ord('q'):
         break
     if k == ord('r'):
-        print "STATE", STATE
-        STATE = 1
+        STATE = 0
 
 cv2.destroyAllWindows()
 

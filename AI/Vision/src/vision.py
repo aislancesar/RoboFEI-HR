@@ -1,6 +1,6 @@
-PAN = 512 # Centralizes camera horizontally.
-CALIB_TILT = 700 # Centralizes camera vertically for calibration.
-RUN_TILT = 800 # Position to be used while running.
+PAN = 507 # Centralizes camera horizontally.
+CALIB_TILT = 750 # Centralizes camera vertically for calibration.
+RUN_TILT = 750 # Position to be used while running.
 
 import sys
 sys.path.append('../../Blackboard/src/')
@@ -91,39 +91,15 @@ while True:
 
     if STATE == 1:
         if M[0] == -1:
-            STATE = 4
-        elif M[0] < len(main.img[0])/2:
             STATE = 2
-        elif M[0] > len(main.img[0])/2:
-            STATE = 3
             
         print "Walk Forward!"
         bkb.write_float(Mem, 'VISION_OPP01_DIST', 0)
         bkb.write_float(Mem, 'VISION_OPP02_DIST', 0)
-        bkb.write_float(Mem, 'VISION_OPP03_DIST', 0)
+        bkb.write_float(Mem, 'VISION_OPP03_DIST', float (60 * (len(main.img[0])/2 - M[0]) / len(main.img[0])))
         bkb.write_int(Mem, 'DECISION_ACTION_A', 21)
     
     if STATE == 2:
-        if M[0] > len(main.img[0])/2:
-            STATE = 1
-
-        print "Turn Left!"
-        bkb.write_float(Mem, 'VISION_OPP01_DIST', 0)
-        bkb.write_float(Mem, 'VISION_OPP02_DIST', 0)
-        bkb.write_float(Mem, 'VISION_OPP03_DIST', float (40 * (len(main.img[0])/2 - M[0]) / len(main.img[0])))
-        bkb.write_int(Mem, 'DECISION_ACTION_A', 21)
-    
-    if STATE == 3:
-        if M[0] < len(main.img[0])/2:
-            STATE = 1
-        
-        print "Turn Right!"
-        bkb.write_float(Mem, 'VISION_OPP01_DIST', 0)
-        bkb.write_float(Mem, 'VISION_OPP02_DIST', 0)
-        bkb.write_float(Mem, 'VISION_OPP03_DIST', - float (40 * (len(main.img[0])/2 - M[0]) / len(main.img[0])))
-        bkb.write_int(Mem, 'DECISION_ACTION_A', 21)
-    
-    if STATE == 4:
         print "Stop!"
         bkb.write_int(Mem, 'DECISION_ACTION_A', 0)
 
