@@ -202,22 +202,6 @@ int main(int argc, char **argv)
                 case 98: //b
                     actionMove.standupBack(stop_gait);
                 break;
-                
-                case 112: //p
-                    actionMove.kick_right_strong(&cm730, stop_gait);
-                break;
-
-                case 108: //l
-                    actionMove.kick_left_strong(&cm730, stop_gait);
-                break;
-
-                case 99: //c
-                    actionMove.kick_right_weak(stop_gait);
-                break;
-
-                case 103: //g
-                    actionMove.kick_left_weak(stop_gait);
-                break;
 
                 case 102: //f
                     gaitMove.walk_foward_fast(stop_gait, same_moviment);
@@ -227,16 +211,8 @@ int main(int argc, char **argv)
                     gaitMove.turn_right(stop_gait, true, same_moviment);
                 break;
 
-                case 105: //i
-                    actionMove.pass_left(&cm730, stop_gait);
-                break;
-
                 case 101: //e
                     gaitMove.turn_left(stop_gait, true, same_moviment);
-                break;
-
-                case 106: //j
-                    actionMove.pass_right(&cm730, stop_gait);
                 break;
 
                 case 109: //m
@@ -247,24 +223,8 @@ int main(int argc, char **argv)
                     gaitMove.sidle_right(stop_gait, same_moviment);
                 break;
 
-                case 111: //o
-                    gaitMove.turn_around_ball_left(stop_gait, same_moviment);
-                break;
-
-                case 113: //q
-                    gaitMove.turn_around_ball_right(stop_gait, same_moviment);
-                break;
-
                 case 107: //k
                     gaitMove.walk_foward_slow(stop_gait, true, same_moviment);
-                break;
-
-                case 114: //r
-                    gaitMove.walk_backward_slow(stop_gait, true, same_moviment);
-                break;
-
-                case 118: //v
-                    gaitMove.walk_backward_fast(stop_gait, same_moviment);
                 break;
 
                 case 115: //s
@@ -273,10 +233,6 @@ int main(int argc, char **argv)
 
                 case 116: //t
                     gaitMove.robot_stop(stop_gait);
-                break;
-                
-                case 117: //u
-                    actionMove.goalkeeper(stop_gait);
                 break;
 
                 case 104: //h
@@ -354,12 +310,6 @@ int main(int argc, char **argv)
             if(read_int(mem, DECISION_ACTION_A) == 3)
                 gaitMove.turn_right(stop_gait, true, same_moviment);
 
-            if(read_int(mem, DECISION_ACTION_A) == 4)
-                actionMove.kick_right_strong(&cm730, stop_gait);
-
-            if(read_int(mem, DECISION_ACTION_A) == 5)
-                actionMove.kick_left_strong(&cm730, stop_gait);
-
             if(read_int(mem, DECISION_ACTION_A) == 6)
                 gaitMove.sidle_left(stop_gait, same_moviment);
 
@@ -369,23 +319,8 @@ int main(int argc, char **argv)
             if(read_int(mem, DECISION_ACTION_A) == 8)
                 gaitMove.walk_foward_slow(stop_gait, false, same_moviment);
 
-            if(read_int(mem, DECISION_ACTION_A) == 9)
-                gaitMove.turn_around_ball_left(stop_gait, same_moviment);
-
-            if(read_int(mem, DECISION_ACTION_A) == 10)
-                actionMove.goalkeeper(stop_gait);
-
             if(read_int(mem, DECISION_ACTION_A) == 11)
                 gaitMove.Gait_in_place(stop_gait, same_moviment);
-
-            if(read_int(mem, DECISION_ACTION_A) == 12)
-                actionMove.pass_left(&cm730, stop_gait);
-
-            if(read_int(mem, DECISION_ACTION_A) == 13)
-                actionMove.pass_right(&cm730, stop_gait);
-
-            if(read_int(mem, DECISION_ACTION_A) == 14)
-                gaitMove.turn_around_ball_right(stop_gait, same_moviment);
 
             if(read_int(mem, DECISION_ACTION_A) == 15)
             {
@@ -401,14 +336,6 @@ int main(int argc, char **argv)
                 else
                     std::cout<<" | \e[1;31mRobô não está caido ou IMU está desligada\e[0m"<<std::endl;
             }
-            if(read_int(mem, DECISION_ACTION_A) == 17)
-            {
-                gaitMove.walk_backward_fast(stop_gait, same_moviment);
-            }
-            if(read_int(mem, DECISION_ACTION_A) == 18)
-            {
-                gaitMove.walk_backward_slow(stop_gait, true, same_moviment);
-            }
 
             if(read_int(mem, DECISION_ACTION_A) == 19)
                 actionMove.greetings(stop_gait);
@@ -416,11 +343,14 @@ int main(int argc, char **argv)
             if(read_int(mem, DECISION_ACTION_A) == 20)
                 actionMove.goodBye(stop_gait);
 
-            if(read_int(mem, DECISION_ACTION_A) == 21)
-                actionMove.kick_right_weak(stop_gait); //Chute fraco com pe direito
+            if(read_int(mem, DECISION_ACTION_A) == 21){
+                // Lazy...
+                float X = read_float(mem, VISION_OPP01_DIST);
+                float Y = read_float(mem, VISION_OPP02_DIST);
+                float A = read_float(mem, VISION_OPP03_DIST);
 
-            if(read_int(mem, DECISION_ACTION_A) == 22)
-                actionMove.kick_left_weak(stop_gait); //Chute fraco com pe esquerdo
+                gaitMove.proporcional_walk(X, Y, A, stop_gait, same_moviment);
+            }
 
             //Imprime na tela o tempo que esta ocioso por nao receber uma nova instrucao da decisao-------
             count_read++;
@@ -428,6 +358,7 @@ int main(int argc, char **argv)
             fflush (stdout);
             usleep(step_time*1000); //Operando na frequencia de 1/step_time Hertz
             //--------------------------------------------------------------------------------------------
+            }
     }
     //--------------------------------------------------------------------------------------------------
     //==================================================================

@@ -62,6 +62,8 @@ class GaitMove
 
         void walk_backward_slow(bool &stop_gait, bool max_speed, bool same_moviment);
 
+        void proporcional_walk(float X_amplitude, float Y_amplitude, float A_amplitude, bool &stop_gait, bool same_moviment);
+        
     private:
         int *mem;
         ReadConfig* gait;
@@ -73,8 +75,7 @@ class GaitMove
         ReadConfig* sidleR;
         ReadConfig* sidleL;
 
-       void move_gait(float X_amplitude, float Y_amplitude, float A_amplitude, bool &stop_gait, ReadConfig* configGait, ReadConfig* configP);
-
+        void move_gait(float X_amplitude, float Y_amplitude, float A_amplitude, bool &stop_gait, ReadConfig* configGait, ReadConfig* configP);
 };
 
 //*********************************************************************

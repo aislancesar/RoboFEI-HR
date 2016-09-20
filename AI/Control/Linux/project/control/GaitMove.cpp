@@ -141,7 +141,6 @@ void GaitMove::walk_foward_fast(bool &stop_gait, bool same_moviment)
     move_gait(walkfoward->walk_foward, walkfoward->sidle, walkfoward->turn_angle, stop_gait, gait, walkfoward);
 }
 
-
 //========================================================================
 //O robo vira para a direita----------------------------------------------
 void GaitMove::turn_right(bool &stop_gait, bool max_angle, bool same_moviment)
@@ -223,6 +222,11 @@ void GaitMove::walk_backward_slow(bool &stop_gait, bool max_speed, bool same_mov
         move_gait(-walkslow->walk_foward, walkslow->sidle, walkslow->turn_angle, stop_gait, gait, walkslow);
 }
 
-
-
-
+//========================================================================
+//Proporcional Walk ------------------------------------------------------
+void GaitMove::proporcional_walk(float X_amplitude, float Y_amplitude, float A_amplitude, bool &stop_gait, bool same_moviment)
+{
+    if(same_moviment == false)
+        std::cout<<" | \e[38;5;45mAndar Proporcional\e[0m"<<std::endl;
+    move_gait(walkfoward->walk_foward + X_amplitude, walkfoward->sidle + Y_amplitude, walkfoward->turn_angle + A_amplitude, stop_gait, gait, walkfoward);
+}

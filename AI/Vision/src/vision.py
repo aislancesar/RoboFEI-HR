@@ -86,33 +86,7 @@ while True:
     print
 
     # --- DECISION PROCESS ---
-    if STATE == 0 and M[0] > len(main.img[0])/3 and M[0] < 2 * len(main.img[0])/3:
-        print "Move Forward!"
-        STATE = 1
-        bkb.write_int(Mem, 'DECISION_ACTION_A', 8)
-    elif STATE == 1:
-        if M[0] == -1:
-            print "Stop!"
-            STATE = 4
-            bkb.write_int(Mem, 'DECISION_ACTION_A', 0)
-        elif M[0] < len(main.img[0])/3:
-            print "Turn Left!"
-            STATE = 2
-            bkb.write_int(Mem, 'DECISION_ACTION_A', 2)
-        elif M[0] > 2*len(main.img[0])/3:
-            print "Turn Right!"
-            STATE = 3
-            bkb.write_int(Mem, 'DECISION_ACTION_A', 3)
-    elif STATE == 2:
-        if M[0] > len(main.img[0])/2:
-            print "Walk Forward!"
-            STATE = 1
-            bkb.write_int(Mem, 'DECISION_ACTION_A', 8)
-    elif STATE == 3:
-        if M[0] < len(main.img[0])/2:
-            print "Walk Forward!"
-            STATE = 1
-            bkb.write_int(Mem, 'DECISION_ACTION_A', 8)
+    
 
     # Press 'q' to exit.
     if cv2.waitKey(20) & 0xFF == ord('q'):
