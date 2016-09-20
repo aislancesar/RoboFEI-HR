@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aislan/RoboFEI-HT_Debug/AI
+CMAKE_SOURCE_DIR = /home/fei/RoboFEI-HR/AI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aislan/RoboFEI-HT_Debug/AI/build
+CMAKE_BINARY_DIR = /home/fei/RoboFEI-HR/AI/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,14 +110,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/aislan/RoboFEI-HT_Debug/AI/build/CMakeFiles /home/aislan/RoboFEI-HT_Debug/AI/build/Control/CMakeFiles/progress.marks
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f CMakeFiles/Makefile2 Control/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aislan/RoboFEI-HT_Debug/AI/build/CMakeFiles 0
+	cd /home/fei/RoboFEI-HR/AI/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fei/RoboFEI-HR/AI/build/CMakeFiles /home/fei/RoboFEI-HR/AI/build/Control/CMakeFiles/progress.marks
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f CMakeFiles/Makefile2 Control/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fei/RoboFEI-HR/AI/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f CMakeFiles/Makefile2 Control/clean
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f CMakeFiles/Makefile2 Control/clean
 .PHONY : clean
 
 # The main clean target
@@ -126,22 +126,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f CMakeFiles/Makefile2 Control/preinstall
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f CMakeFiles/Makefile2 Control/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f CMakeFiles/Makefile2 Control/preinstall
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f CMakeFiles/Makefile2 Control/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fei/RoboFEI-HR/AI/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Control/CMakeFiles/control.dir/rule:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f CMakeFiles/Makefile2 Control/CMakeFiles/control.dir/rule
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f CMakeFiles/Makefile2 Control/CMakeFiles/control.dir/rule
 .PHONY : Control/CMakeFiles/control.dir/rule
 
 # Convenience name for target.
@@ -150,12 +150,12 @@ control: Control/CMakeFiles/control.dir/rule
 
 # fast build rule for target.
 control/fast:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/control.dir/build.make Control/CMakeFiles/control.dir/build
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/control.dir/build.make Control/CMakeFiles/control.dir/build
 .PHONY : control/fast
 
 # Convenience name for target.
 Control/CMakeFiles/libcontrol.dir/rule:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f CMakeFiles/Makefile2 Control/CMakeFiles/libcontrol.dir/rule
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f CMakeFiles/Makefile2 Control/CMakeFiles/libcontrol.dir/rule
 .PHONY : Control/CMakeFiles/libcontrol.dir/rule
 
 # Convenience name for target.
@@ -164,7 +164,7 @@ libcontrol: Control/CMakeFiles/libcontrol.dir/rule
 
 # fast build rule for target.
 libcontrol/fast:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/build
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/build
 .PHONY : libcontrol/fast
 
 Linux/project/control/ActionMove.o: Linux/project/control/ActionMove.cpp.o
@@ -172,7 +172,7 @@ Linux/project/control/ActionMove.o: Linux/project/control/ActionMove.cpp.o
 
 # target to build an object file
 Linux/project/control/ActionMove.cpp.o:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o
 .PHONY : Linux/project/control/ActionMove.cpp.o
 
 Linux/project/control/ActionMove.i: Linux/project/control/ActionMove.cpp.i
@@ -180,7 +180,7 @@ Linux/project/control/ActionMove.i: Linux/project/control/ActionMove.cpp.i
 
 # target to preprocess a source file
 Linux/project/control/ActionMove.cpp.i:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.i
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.i
 .PHONY : Linux/project/control/ActionMove.cpp.i
 
 Linux/project/control/ActionMove.s: Linux/project/control/ActionMove.cpp.s
@@ -188,7 +188,7 @@ Linux/project/control/ActionMove.s: Linux/project/control/ActionMove.cpp.s
 
 # target to generate assembly for a file
 Linux/project/control/ActionMove.cpp.s:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.s
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.s
 .PHONY : Linux/project/control/ActionMove.cpp.s
 
 Linux/project/control/GaitMove.o: Linux/project/control/GaitMove.cpp.o
@@ -196,7 +196,7 @@ Linux/project/control/GaitMove.o: Linux/project/control/GaitMove.cpp.o
 
 # target to build an object file
 Linux/project/control/GaitMove.cpp.o:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o
 .PHONY : Linux/project/control/GaitMove.cpp.o
 
 Linux/project/control/GaitMove.i: Linux/project/control/GaitMove.cpp.i
@@ -204,7 +204,7 @@ Linux/project/control/GaitMove.i: Linux/project/control/GaitMove.cpp.i
 
 # target to preprocess a source file
 Linux/project/control/GaitMove.cpp.i:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.i
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.i
 .PHONY : Linux/project/control/GaitMove.cpp.i
 
 Linux/project/control/GaitMove.s: Linux/project/control/GaitMove.cpp.s
@@ -212,7 +212,7 @@ Linux/project/control/GaitMove.s: Linux/project/control/GaitMove.cpp.s
 
 # target to generate assembly for a file
 Linux/project/control/GaitMove.cpp.s:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.s
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.s
 .PHONY : Linux/project/control/GaitMove.cpp.s
 
 Linux/project/control/ReadConfig.o: Linux/project/control/ReadConfig.cpp.o
@@ -220,7 +220,7 @@ Linux/project/control/ReadConfig.o: Linux/project/control/ReadConfig.cpp.o
 
 # target to build an object file
 Linux/project/control/ReadConfig.cpp.o:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o
 .PHONY : Linux/project/control/ReadConfig.cpp.o
 
 Linux/project/control/ReadConfig.i: Linux/project/control/ReadConfig.cpp.i
@@ -228,7 +228,7 @@ Linux/project/control/ReadConfig.i: Linux/project/control/ReadConfig.cpp.i
 
 # target to preprocess a source file
 Linux/project/control/ReadConfig.cpp.i:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.i
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.i
 .PHONY : Linux/project/control/ReadConfig.cpp.i
 
 Linux/project/control/ReadConfig.s: Linux/project/control/ReadConfig.cpp.s
@@ -236,7 +236,7 @@ Linux/project/control/ReadConfig.s: Linux/project/control/ReadConfig.cpp.s
 
 # target to generate assembly for a file
 Linux/project/control/ReadConfig.cpp.s:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.s
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.s
 .PHONY : Linux/project/control/ReadConfig.cpp.s
 
 Linux/project/control/kbhit.o: Linux/project/control/kbhit.cpp.o
@@ -244,7 +244,7 @@ Linux/project/control/kbhit.o: Linux/project/control/kbhit.cpp.o
 
 # target to build an object file
 Linux/project/control/kbhit.cpp.o:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o
 .PHONY : Linux/project/control/kbhit.cpp.o
 
 Linux/project/control/kbhit.i: Linux/project/control/kbhit.cpp.i
@@ -252,7 +252,7 @@ Linux/project/control/kbhit.i: Linux/project/control/kbhit.cpp.i
 
 # target to preprocess a source file
 Linux/project/control/kbhit.cpp.i:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.i
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.i
 .PHONY : Linux/project/control/kbhit.cpp.i
 
 Linux/project/control/kbhit.s: Linux/project/control/kbhit.cpp.s
@@ -260,7 +260,7 @@ Linux/project/control/kbhit.s: Linux/project/control/kbhit.cpp.s
 
 # target to generate assembly for a file
 Linux/project/control/kbhit.cpp.s:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.s
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.s
 .PHONY : Linux/project/control/kbhit.cpp.s
 
 Linux/project/control/main.o: Linux/project/control/main.cpp.o
@@ -268,8 +268,8 @@ Linux/project/control/main.o: Linux/project/control/main.cpp.o
 
 # target to build an object file
 Linux/project/control/main.cpp.o:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/control.dir/build.make Control/CMakeFiles/control.dir/Linux/project/control/main.cpp.o
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/control.dir/build.make Control/CMakeFiles/control.dir/Linux/project/control/main.cpp.o
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o
 .PHONY : Linux/project/control/main.cpp.o
 
 Linux/project/control/main.i: Linux/project/control/main.cpp.i
@@ -277,8 +277,8 @@ Linux/project/control/main.i: Linux/project/control/main.cpp.i
 
 # target to preprocess a source file
 Linux/project/control/main.cpp.i:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/control.dir/build.make Control/CMakeFiles/control.dir/Linux/project/control/main.cpp.i
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.i
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/control.dir/build.make Control/CMakeFiles/control.dir/Linux/project/control/main.cpp.i
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.i
 .PHONY : Linux/project/control/main.cpp.i
 
 Linux/project/control/main.s: Linux/project/control/main.cpp.s
@@ -286,8 +286,8 @@ Linux/project/control/main.s: Linux/project/control/main.cpp.s
 
 # target to generate assembly for a file
 Linux/project/control/main.cpp.s:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/control.dir/build.make Control/CMakeFiles/control.dir/Linux/project/control/main.cpp.s
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.s
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/control.dir/build.make Control/CMakeFiles/control.dir/Linux/project/control/main.cpp.s
+	cd /home/fei/RoboFEI-HR/AI/build && $(MAKE) -f Control/CMakeFiles/libcontrol.dir/build.make Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.s
 .PHONY : Linux/project/control/main.cpp.s
 
 # Help Target
@@ -330,6 +330,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fei/RoboFEI-HR/AI/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

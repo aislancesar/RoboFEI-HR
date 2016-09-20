@@ -4,14 +4,14 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/main.cpp" "/home/aislan/RoboFEI-HT_Debug/AI/build/Control/CMakeFiles/control.dir/Linux/project/control/main.cpp.o"
+  "/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/main.cpp" "/home/fei/RoboFEI-HR/AI/build/Control/CMakeFiles/control.dir/Linux/project/control/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/aislan/RoboFEI-HT_Debug/AI/build/Control/CMakeFiles/libcontrol.dir/DependInfo.cmake"
-  "/home/aislan/RoboFEI-HT_Debug/AI/build/Blackboard/CMakeFiles/blackboard.dir/DependInfo.cmake"
+  "/home/fei/RoboFEI-HR/AI/build/Control/CMakeFiles/libcontrol.dir/DependInfo.cmake"
+  "/home/fei/RoboFEI-HR/AI/build/Blackboard/CMakeFiles/blackboard.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

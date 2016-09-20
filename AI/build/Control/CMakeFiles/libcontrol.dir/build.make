@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aislan/RoboFEI-HT_Debug/AI
+CMAKE_SOURCE_DIR = /home/fei/RoboFEI-HR/AI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aislan/RoboFEI-HT_Debug/AI/build
+CMAKE_BINARY_DIR = /home/fei/RoboFEI-HR/AI/build
 
 # Include any dependencies generated for this target.
 include Control/CMakeFiles/libcontrol.dir/depend.make
@@ -51,17 +51,17 @@ include Control/CMakeFiles/libcontrol.dir/flags.make
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o: Control/CMakeFiles/libcontrol.dir/flags.make
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o: ../Control/Linux/project/control/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aislan/RoboFEI-HT_Debug/AI/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/fei/RoboFEI-HR/AI/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o -c /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/main.cpp
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o -c /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/main.cpp
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.i"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/main.cpp > CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.i
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/main.cpp > CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.i
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.s"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/main.cpp -o CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.s
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/main.cpp -o CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.s
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o.requires:
 .PHONY : Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o.requires
@@ -74,17 +74,17 @@ Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o.provides.buil
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o: Control/CMakeFiles/libcontrol.dir/flags.make
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o: ../Control/Linux/project/control/kbhit.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aislan/RoboFEI-HT_Debug/AI/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/fei/RoboFEI-HR/AI/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o -c /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/kbhit.cpp
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o -c /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/kbhit.cpp
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.i"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/kbhit.cpp > CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.i
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/kbhit.cpp > CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.i
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.s"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/kbhit.cpp -o CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.s
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/kbhit.cpp -o CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.s
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o.requires:
 .PHONY : Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o.requires
@@ -97,17 +97,17 @@ Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o.provides.bui
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o: Control/CMakeFiles/libcontrol.dir/flags.make
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o: ../Control/Linux/project/control/ReadConfig.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aislan/RoboFEI-HT_Debug/AI/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/fei/RoboFEI-HR/AI/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o -c /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ReadConfig.cpp
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o -c /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.cpp
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.i"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ReadConfig.cpp > CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.i
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.cpp > CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.i
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.s"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ReadConfig.cpp -o CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.s
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.cpp -o CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.s
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o.requires:
 .PHONY : Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o.requires
@@ -120,17 +120,17 @@ Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o.provide
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o: Control/CMakeFiles/libcontrol.dir/flags.make
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o: ../Control/Linux/project/control/ActionMove.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aislan/RoboFEI-HT_Debug/AI/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/fei/RoboFEI-HR/AI/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o -c /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ActionMove.cpp
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o -c /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ActionMove.cpp
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.i"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ActionMove.cpp > CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.i
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ActionMove.cpp > CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.i
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.s"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ActionMove.cpp -o CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.s
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ActionMove.cpp -o CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.s
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o.requires:
 .PHONY : Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o.requires
@@ -143,17 +143,17 @@ Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o.provide
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o: Control/CMakeFiles/libcontrol.dir/flags.make
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o: ../Control/Linux/project/control/GaitMove.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aislan/RoboFEI-HT_Debug/AI/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/fei/RoboFEI-HR/AI/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o -c /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/GaitMove.cpp
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o -c /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/GaitMove.cpp
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.i"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/GaitMove.cpp > CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.i
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/GaitMove.cpp > CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.i
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.s"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/GaitMove.cpp -o CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.s
+	cd /home/fei/RoboFEI-HR/AI/build/Control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/GaitMove.cpp -o CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.s
 
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o.requires:
 .PHONY : Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o.requires
@@ -183,7 +183,7 @@ Control/liblibcontrol.so: Control/CMakeFiles/libcontrol.dir/Linux/project/contro
 Control/liblibcontrol.so: Control/CMakeFiles/libcontrol.dir/build.make
 Control/liblibcontrol.so: Control/CMakeFiles/libcontrol.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library liblibcontrol.so"
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libcontrol.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/fei/RoboFEI-HR/AI/build/Control && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libcontrol.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Control/CMakeFiles/libcontrol.dir/build: Control/liblibcontrol.so
@@ -197,10 +197,10 @@ Control/CMakeFiles/libcontrol.dir/requires: Control/CMakeFiles/libcontrol.dir/Li
 .PHONY : Control/CMakeFiles/libcontrol.dir/requires
 
 Control/CMakeFiles/libcontrol.dir/clean:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build/Control && $(CMAKE_COMMAND) -P CMakeFiles/libcontrol.dir/cmake_clean.cmake
+	cd /home/fei/RoboFEI-HR/AI/build/Control && $(CMAKE_COMMAND) -P CMakeFiles/libcontrol.dir/cmake_clean.cmake
 .PHONY : Control/CMakeFiles/libcontrol.dir/clean
 
 Control/CMakeFiles/libcontrol.dir/depend:
-	cd /home/aislan/RoboFEI-HT_Debug/AI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aislan/RoboFEI-HT_Debug/AI /home/aislan/RoboFEI-HT_Debug/AI/Control /home/aislan/RoboFEI-HT_Debug/AI/build /home/aislan/RoboFEI-HT_Debug/AI/build/Control /home/aislan/RoboFEI-HT_Debug/AI/build/Control/CMakeFiles/libcontrol.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/fei/RoboFEI-HR/AI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fei/RoboFEI-HR/AI /home/fei/RoboFEI-HR/AI/Control /home/fei/RoboFEI-HR/AI/build /home/fei/RoboFEI-HR/AI/build/Control /home/fei/RoboFEI-HR/AI/build/Control/CMakeFiles/libcontrol.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Control/CMakeFiles/libcontrol.dir/depend
 

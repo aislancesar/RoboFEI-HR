@@ -17,8 +17,8 @@ Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o
  ../Control/Framework/src/minIni/minIni.h
  ../Control/Framework/src/minIni/wxMinIni.h
  ../Control/Linux/include/LinuxCM730.h
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ActionMove.cpp
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ActionMove.hpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ActionMove.cpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ActionMove.hpp
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o
  ../Blackboard/include/blackboard.h
  ../Control/Framework/include/Action.h
@@ -35,9 +35,9 @@ Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o
  ../Control/Framework/src/minIni/minIni.h
  ../Control/Framework/src/minIni/wxMinIni.h
  ../Control/Linux/include/LinuxCM730.h
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/GaitMove.cpp
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/GaitMove.hpp
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ReadConfig.hpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/GaitMove.cpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/GaitMove.hpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.hpp
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o
  ../Control/Framework/include/JointData.h
  ../Control/Framework/include/MotionModule.h
@@ -46,10 +46,10 @@ Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o
  ../Control/Framework/src/minIni/minGlue.h
  ../Control/Framework/src/minIni/minIni.h
  ../Control/Framework/src/minIni/wxMinIni.h
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ReadConfig.cpp
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ReadConfig.hpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.cpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.hpp
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/kbhit.cpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/kbhit.cpp
 Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o
  ../Blackboard/include/blackboard.h
  ../Control/Framework/include/Action.h
@@ -67,7 +67,7 @@ Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o
  ../Control/Framework/src/minIni/wxMinIni.h
  ../Control/Linux/include/LinuxCM730.h
  ../Control/Linux/include/LinuxMotionTimer.h
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ActionMove.hpp
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/GaitMove.hpp
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ReadConfig.hpp
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/main.cpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ActionMove.hpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/GaitMove.hpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.hpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/main.cpp

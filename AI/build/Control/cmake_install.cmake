@@ -1,4 +1,4 @@
-# Install script for directory: /home/aislan/RoboFEI-HT_Debug/AI/Control
+# Install script for directory: /home/fei/RoboFEI-HR/AI/Control
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,25 +33,25 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  IF(EXISTS "$ENV{DESTDIR}/home/aislan/RoboFEI-HT_Debug/AI/build/lib/liblibcontrol.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/aislan/RoboFEI-HT_Debug/AI/build/lib/liblibcontrol.so")
+  IF(EXISTS "$ENV{DESTDIR}/home/fei/RoboFEI-HR/AI/build/lib/liblibcontrol.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/fei/RoboFEI-HR/AI/build/lib/liblibcontrol.so")
     FILE(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/home/aislan/RoboFEI-HT_Debug/AI/build/lib/liblibcontrol.so"
+         FILE "$ENV{DESTDIR}/home/fei/RoboFEI-HR/AI/build/lib/liblibcontrol.so"
          RPATH "")
   ENDIF()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/aislan/RoboFEI-HT_Debug/AI/build/lib/liblibcontrol.so")
+   "/home/fei/RoboFEI-HR/AI/build/lib/liblibcontrol.so")
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-FILE(INSTALL DESTINATION "/home/aislan/RoboFEI-HT_Debug/AI/build/lib" TYPE SHARED_LIBRARY FILES "/home/aislan/RoboFEI-HT_Debug/AI/build/Control/liblibcontrol.so")
-  IF(EXISTS "$ENV{DESTDIR}/home/aislan/RoboFEI-HT_Debug/AI/build/lib/liblibcontrol.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/aislan/RoboFEI-HT_Debug/AI/build/lib/liblibcontrol.so")
+FILE(INSTALL DESTINATION "/home/fei/RoboFEI-HR/AI/build/lib" TYPE SHARED_LIBRARY FILES "/home/fei/RoboFEI-HR/AI/build/Control/liblibcontrol.so")
+  IF(EXISTS "$ENV{DESTDIR}/home/fei/RoboFEI-HR/AI/build/lib/liblibcontrol.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/fei/RoboFEI-HR/AI/build/lib/liblibcontrol.so")
     IF(CMAKE_INSTALL_DO_STRIP)
-      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/aislan/RoboFEI-HT_Debug/AI/build/lib/liblibcontrol.so")
+      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/fei/RoboFEI-HR/AI/build/lib/liblibcontrol.so")
     ENDIF(CMAKE_INSTALL_DO_STRIP)
   ENDIF()
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")

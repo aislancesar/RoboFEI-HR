@@ -18,7 +18,7 @@ Control/CMakeFiles/control.dir/Linux/project/control/main.cpp.o
  ../Control/Framework/src/minIni/wxMinIni.h
  ../Control/Linux/include/LinuxCM730.h
  ../Control/Linux/include/LinuxMotionTimer.h
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ActionMove.hpp
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/GaitMove.hpp
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ReadConfig.hpp
- /home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/main.cpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ActionMove.hpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/GaitMove.hpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.hpp
+ /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/main.cpp

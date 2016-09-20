@@ -4,11 +4,11 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ActionMove.cpp" "/home/aislan/RoboFEI-HT_Debug/AI/build/Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o"
-  "/home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/GaitMove.cpp" "/home/aislan/RoboFEI-HT_Debug/AI/build/Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o"
-  "/home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/ReadConfig.cpp" "/home/aislan/RoboFEI-HT_Debug/AI/build/Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o"
-  "/home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/kbhit.cpp" "/home/aislan/RoboFEI-HT_Debug/AI/build/Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o"
-  "/home/aislan/RoboFEI-HT_Debug/AI/Control/Linux/project/control/main.cpp" "/home/aislan/RoboFEI-HT_Debug/AI/build/Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o"
+  "/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ActionMove.cpp" "/home/fei/RoboFEI-HR/AI/build/Control/CMakeFiles/libcontrol.dir/Linux/project/control/ActionMove.cpp.o"
+  "/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/GaitMove.cpp" "/home/fei/RoboFEI-HR/AI/build/Control/CMakeFiles/libcontrol.dir/Linux/project/control/GaitMove.cpp.o"
+  "/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.cpp" "/home/fei/RoboFEI-HR/AI/build/Control/CMakeFiles/libcontrol.dir/Linux/project/control/ReadConfig.cpp.o"
+  "/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/kbhit.cpp" "/home/fei/RoboFEI-HR/AI/build/Control/CMakeFiles/libcontrol.dir/Linux/project/control/kbhit.cpp.o"
+  "/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/main.cpp" "/home/fei/RoboFEI-HR/AI/build/Control/CMakeFiles/libcontrol.dir/Linux/project/control/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
