@@ -86,11 +86,14 @@ while True:
     print
 
     # --- DECISION PROCESS ---
-    
 
     # Press 'q' to exit.
-    if cv2.waitKey(20) & 0xFF == ord('q'):
+    # Press 'r' to Run Again
+    k = cv2.waitKey(20) & 0xFF 
+    if k == ord('q'):
         break
+    if k == ord('r'):
+        STATE = 0
 
 cv2.destroyAllWindows()
 
