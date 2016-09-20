@@ -4,7 +4,7 @@
 *.so
 
 env/
-build/
+AI/build/
 AI/Control/Data/*.ini
 AI/Control/Data/*.bin
 develop-eggs/
