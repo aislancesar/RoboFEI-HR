@@ -287,12 +287,12 @@ class RunVision:
                 # Paints the mask into the image.
                 res = cv2.bitwise_and(self.img, self.img, mask=nmask)
                 try:
-                    # Divides the image into 7 scanlines.
-                    dx = int(len(res[0])/7)
+                    # Divides the image into 15 scanlines.
+                    dx = int(len(res[0])/30)
                     # Computes the x coordinates of the scanlines.
-                    li = [int(dx/2), dx + int(dx/2), 2 * dx + int(dx/2), 3 * dx + int(dx/2), 4 * dx + int(dx/2), 5 * dx + int(dx/2), 6 * dx + int(dx/2)]
+                    li = np.arange(dx, len(res[0]), 2 * dx)
                     # Initializes the scanlines sizes.
-                    lj = [0, 0, 0, 0, 0, 0, 0]
+                    lj = np.zeros(len(li))
 
                     # Iterates through each scanline.
                     for i in range(len(li)):
@@ -317,18 +317,26 @@ class RunVision:
                                         break
                                 break
                         # Draws the scan line.
-                        cv2.line(res, (li[i], 1840), (li[i], lj[i]), [0, 255, 0], 2)
+                        try:
+                            cv2.line(res, (li[i], 1840), (li[i], lj[i]), [0, 255, 0], 2)
+                        except:
+                            pass
 
-                    # Initialize a wheighed sum and a normalizing factor.
-                    s = 0
-                    n = 0
-                    # For each scanline gets its sum.
+                    # Compute the most probable position of the obstacle.
+                    s = 0 # Initializes a sum.
+                    n = 0 # Initializes a wheight.
+                    
+                    # For each point compute its weight.
                     for i in range(len(li)):
-                        s += li[i] * lj[i]
-                        n += lj[i]
+                        s += li[i] * lj[i] * lj[i]
+                        n += lj[i] * lj[i]
+
+                    m = int(s/n) # Compute the mean.
+                    v = max(lj) # Gets the maximum point, where the obstacle is.
+
                     # The point to swerve is given by this.
                     try:
-                        cv2.circle(res, (int(s/n), int(len(res)/2)), int(len(res)/30), [255,0,255], -1)
+                        cv2.circle(res, (m, v), int(len(res)/30), [255,0,255], -1)
                     except:
                         pass
                 except:
@@ -430,12 +438,12 @@ class RunVision:
             # Generates a mask from the hsv image.
             mask = cv2.inRange(self.hsv, self.swerve_lower, self.swerve_upper)
             
-            # Divides the image into 7 scanlines.
-            dx = int(len(self.img[0])/7)
+            # Divides the image into 15 scanlines.
+            dx = int(len(res[0])/30)
             # Computes the x coordinates of the scanlines.
-            li = [int(dx/2), dx + int(dx/2), 2 * dx + int(dx/2), 3 * dx + int(dx/2), 4 * dx + int(dx/2), 5 * dx + int(dx/2), 6 * dx + int(dx/2)]
+            li = np.arange(dx, len(res[0]), 2 * dx)
             # Initializes the scanlines sizes.
-            lj = [0, 0, 0, 0, 0, 0, 0]
+            lj = np.zeros(len(li))
             
             # Iterates through each scanline.
             for i in range(len(li)):
@@ -460,13 +468,18 @@ class RunVision:
                                 break
                         break
 
-            # Initialize a wheighed sum and a normalizing factor.
-            s = 0
-            n = 0
-            # For each scanline gets its sum.
+            # Compute the most probable position of the obstacle.
+            s = 0 # Initializes a sum.
+            n = 0 # Initializes a wheight.
+            
+            # For each point compute its weight.
             for i in range(len(li)):
-                s += li[i] * lj[i]
-                n += lj[i]
+                s += li[i] * lj[i] * lj[i]
+                n += lj[i] * lj[i]
+
+            m = int(s/n) # Compute the mean.
+            v = max(lj) # Gets the maximum point, where the obstacle is.
+
             # The point to swerve is given by this.
             try:
                 cv2.circle(res, (int(s/n), int(len(res)/2)), int(len(res)/30), [255,0,255], -1)
@@ -474,9 +487,9 @@ class RunVision:
                 pass
 
             # Return something
-            return (s/n)
+            return m, v
         except:
-            return -1
+            return -1, -1
 
 # --- Main function -------------------------------------------------------------------------------
     
