@@ -311,6 +311,25 @@ void ActionMove::poseStandup(bool &stop_gait)
     write_int(mem, CONTROL_MOVING, 0);
 }
 
+//========================================================================
+//Subir degrau------------------------------------------------------------
+void ActionMove::stepUp(bool &stop_gait)
+{
+    write_int(mem, CONTROL_MOVING, 1);
+    std::cout<<" | \e[38;5;45mSubir degrau\e[0m"<<std::endl;
+    move_action(80, 0, stop_gait);
+    write_int(mem, CONTROL_MOVING, 0);
+}
+
+//========================================================================
+//Descer degrau-----------------------------------------------------------
+void ActionMove::stepDown(bool &stop_gait)
+{
+    write_int(mem, CONTROL_MOVING, 1);
+    std::cout<<" | \e[38;5;45mDescer degrau\e[0m"<<std::endl;
+    move_action(82, 0, stop_gait);
+    write_int(mem, CONTROL_MOVING, 0);
+}
 
 //*********************************************************************
 //---------------------------------------------------------------------

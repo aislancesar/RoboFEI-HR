@@ -59,6 +59,10 @@ class ActionMove
         void standupBack(bool &stop_gait);
 
         void poseStandup(bool &stop_gait);
+        
+        void stepUp(bool &stop_gait);
+        
+        void stepDown(bool &stop_gait);
 
     private:
         int *mem;

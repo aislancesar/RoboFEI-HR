@@ -351,6 +351,12 @@ int main(int argc, char **argv)
 
                 gaitMove.proporcional_walk(X, Y, A, stop_gait, same_moviment);
             }
+            
+            if(read_int(mem, DECISION_ACTION_A) == 22)
+                actionMove.stepUp(stop_gait);
+            
+            if(read_int(mem, DECISION_ACTION_A) == 23)
+                actionMove.stepDown(stop_gait);
 
             //Imprime na tela o tempo que esta ocioso por nao receber uma nova instrucao da decisao-------
             count_read++;
