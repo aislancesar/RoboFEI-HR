@@ -43,7 +43,7 @@ servo = Servo(PAN, TILT)
 main.MainCalibration()
 if args.step:
     main.StepCalibration()
-    servo.writeWord(20, 30, 800)
+    # servo.writeWord(20, 30, 800)
 if args.swerve:
     main.SwerveCalibration()
 
@@ -89,8 +89,12 @@ while True:
     if STATE == 1:
         if M[0] == -1:
             STATE = 2
-        if S[0] != -1:
+        if S[0] != -1 and S[1] > len(main.img)/2:
             STATE = 3
+        if W[1] > len(main.img)/2 and W[0] < len(main.img[0])/3:
+            STATE = 8
+        if W[1] > len(main.img)/3 and W[0] > 2 * len(main.img[0])/3:
+            STATE = 9
             
         print "Walk Forward!"
         bkb.write_float(Mem, 'VISION_OPP01_DIST', 0)
@@ -113,8 +117,48 @@ while True:
         bkb.write_int(Mem, 'DECISION_ACTION_A', 21)
         
     if STATE == 4:
-        print "In Position!"
-        bkb.write_int(Mem, 'DECISION_ACTION_A', 0)
+        print "Step Up!"
+        bkb.write_int(Mem, 'DECISION_ACTION_A', 22)
+        STATE = 5
+
+    if STATE == 5:
+        if S[0] != -1 and S[1] > len(main.img)/2:
+            STATE = 6
+
+        print "Go On!"
+        bkb.write_float(Mem, 'VISION_OPP01_DIST', -10)
+        bkb.write_float(Mem, 'VISION_OPP02_DIST', 0)
+        bkb.write_float(Mem, 'VISION_OPP03_DIST', float (60 * (len(main.img[0])/2 - M[0]) / len(main.img[0])))
+        bkb.write_int(Mem, 'DECISION_ACTION_A', 21)
+
+    if STATE == 6:
+        if S[0] == -1:
+            STATE = 7
+
+        print "Getting in Position!"
+        bkb.write_float(Mem, 'VISION_OPP01_DIST', -20)
+        bkb.write_float(Mem, 'VISION_OPP02_DIST', 0)
+        bkb.write_float(Mem, 'VISION_OPP03_DIST', float (60 * (len(main.img[0])/2 - M[0]) / len(main.img[0])))
+        bkb.write_int(Mem, 'DECISION_ACTION_A', 21)
+
+    if STATE == 7:
+        print "Step Down!"
+        bkb.write_int(Mem, 'DECISION_ACTION_A', 23)
+        STATE = 1
+
+    if STATE == 8:
+        if W[0] > 2 * len(main.img[0])/3:
+            STATE = 1
+
+        print "To the Right"
+        bkb.write_int(Mem, 'DECISION_ACTION_A', 7)
+
+    if STATE == 9:
+        if W[0] < len(main.img[0])/3:
+            STATE = 1
+
+        print "To the Left"
+        bkb.write_int(Mem, 'DECISION_ACTION_A', 6)
         
     # Press 'q' to exit.
     # Press 'r' to Run Again

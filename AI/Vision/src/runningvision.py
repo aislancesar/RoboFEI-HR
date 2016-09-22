@@ -286,14 +286,13 @@ class RunVision:
                 nmask = cv2.bitwise_not(mask)
                 # Paints the mask into the image.
                 res = cv2.bitwise_and(self.img, self.img, mask=nmask)
-                try:
+                try:                
                     # Divides the image into 15 scanlines.
                     dx = int(len(res[0])/30)
                     # Computes the x coordinates of the scanlines.
                     li = np.arange(dx, len(res[0]), 2 * dx)
                     # Initializes the scanlines sizes.
                     lj = np.zeros(len(li))
-
                     # Iterates through each scanline.
                     for i in range(len(li)):
                         up = 0 # Initial Up value.
@@ -318,10 +317,9 @@ class RunVision:
                                 break
                         # Draws the scan line.
                         try:
-                            cv2.line(res, (li[i], 1840), (li[i], lj[i]), [0, 255, 0], 2)
+                            cv2.line(res, (int(li[i]), 1840), (int(li[i]), int(lj[i])), [0, 255, 0], 2)
                         except:
                             pass
-
                     # Compute the most probable position of the obstacle.
                     s = 0 # Initializes a sum.
                     n = 0 # Initializes a wheight.
@@ -332,7 +330,7 @@ class RunVision:
                         n += lj[i] * lj[i]
 
                     m = int(s/n) # Compute the mean.
-                    v = max(lj) # Gets the maximum point, where the obstacle is.
+                    v = int(max(lj)) # Gets the maximum point, where the obstacle is.
 
                     # The point to swerve is given by this.
                     try:
