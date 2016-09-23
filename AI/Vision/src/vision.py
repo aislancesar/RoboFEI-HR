@@ -54,7 +54,7 @@ STATE = -1 # Initializes the FSM
 if args.show:
     cv2.namedWindow('Robot\'s Vision.')
     
-S = (-1, -1)
+S = (-1, -1, 0)
 W = (-1, -1)
 mS = 0
 
@@ -137,7 +137,7 @@ while True:
             
         bkb.write_float(Mem, 'VISION_OPP01_DIST', min(-10, max(-25, -12 * len(main.img) / mS)))
         bkb.write_float(Mem, 'VISION_OPP02_DIST', 0)
-        bkb.write_float(Mem, 'VISION_OPP03_DIST', float (60 * (len(main.img[0])/2 - M[0]) / len(main.img[0])))
+        bkb.write_float(Mem, 'VISION_OPP03_DIST', S[2] * 20)
         bkb.write_int(Mem, 'DECISION_ACTION_A', 21)
     
     # Step Up State.

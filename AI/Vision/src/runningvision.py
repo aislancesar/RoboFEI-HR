@@ -243,6 +243,14 @@ class RunVision:
                     # Computes the centroid of the contour.
                     cx = int(M['m10']/M['m00'])
                     cy = int(M['m01']/M['m00'])
+
+                    xc = M['m10']/M['m00']
+                    yc = M['m01']/M['m00']
+                    a = M['m20']/M['m00'] - xc * xc
+                    b = 2 * (M['m11']/M['m00'] - xc * yc)
+                    c = M['m02']/M['m00'] - yc * yc
+                    theta = atan2(b,(a-c))/2
+
                     # Draws a circle in the middle of the contour.
                     cv2.circle(res, (cx, cy), int(len(res)/30), [255,255,0], -1)
                 except:
@@ -416,8 +424,13 @@ class RunVision:
             # Computs the moments of the contour.
             M = cv2.moments(cnt)
             # Computes the centroid of the contour.
-            cx = int(M['m10']/M['m00'])
-            cy = int(M['m01']/M['m00'])
+            cx = M['m10']/M['m00']
+            cy = M['m01']/M['m00']
+            a = M['m20']/M['m00'] - cx * cx
+            b = 2 * (M['m11']/M['m00'] - cx * cy)
+            c = M['m02']/M['m00'] - cy * cy
+            theta = atan2(b,(a-c))/2
+            
             try:
                 # Draws a circle in the middle of the contour.
                 cv2.circle(res, (cx, cy), int(len(res)/30), [255,255,0], -1)
@@ -425,9 +438,9 @@ class RunVision:
                 pass
 
             # Return a value
-            return cx, cy
+            return xc, yc, theta
         except:
-            return -1, -1
+            return -1, -1, 0
 
 # --- Running segmentation of the Swerve Challenge ------------------------------------------------
 
