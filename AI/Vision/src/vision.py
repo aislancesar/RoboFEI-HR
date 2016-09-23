@@ -133,12 +133,13 @@ while True:
         if mS > 3 * len(main.img)/5:
             STATE = 4
         if S[1] > 0:
-            mS = 0.7 * mS + 0.3 * S[1]
+            mS = 0.65 * mS + 0.35 * S[1]
             
-        bkb.write_float(Mem, 'VISION_OPP01_DIST', min(-10, max(-25, -12 * len(main.img) / mS)))
-        bkb.write_float(Mem, 'VISION_OPP02_DIST', 0)
-        bkb.write_float(Mem, 'VISION_OPP03_DIST', S[2] * 20)
-        bkb.write_int(Mem, 'DECISION_ACTION_A', 21)
+        #bkb.write_float(Mem, 'VISION_OPP01_DIST', min(-10, max(-25, -12 * len(main.img) / mS)))
+        #bkb.write_float(Mem, 'VISION_OPP02_DIST', 0)
+        #bkb.write_float(Mem, 'VISION_OPP03_DIST', -S[2] * 30)
+        #bkb.write_int(Mem, 'DECISION_ACTION_A', 21)
+        bkb.write_int(Mem, 'DECISION_ACTION_A', 8)
     
     # Step Up State.
     if STATE == 4:

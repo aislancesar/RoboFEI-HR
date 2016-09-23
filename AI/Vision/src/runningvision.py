@@ -198,6 +198,13 @@ class RunVision:
                 break
             elif k == ord('r'): # R resets the segmentation values.
                 self.reset(0)
+            elif k == ord('a'): # Presets evrything as a mask, for debugging.
+                self.main_upper[0] = 255
+                self.main_lower[0] = 0
+                self.main_upper[1] = 255
+                self.main_lower[1] = 0
+                self.main_upper[2] = 255
+                self.main_lower[2] = 0
 
         # Closes everything.
         cv2.destroyAllWindows()
@@ -433,12 +440,12 @@ class RunVision:
             
             try:
                 # Draws a circle in the middle of the contour.
-                cv2.circle(res, (cx, cy), int(len(res)/30), [255,255,0], -1)
+                cv2.circle(res, (int(cx), int(cy)), int(len(res)/30), [255,255,0], -1)
             except:
                 pass
 
             # Return a value
-            return xc, yc, theta
+            return cx, cy, theta
         except:
             return -1, -1, 0
 
