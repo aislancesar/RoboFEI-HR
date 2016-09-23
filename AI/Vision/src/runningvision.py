@@ -476,11 +476,11 @@ class RunVision:
                 n += lj[i] * lj[i]
 
             m = int(s/n) # Compute the mean.
-            v = max(lj) # Gets the maximum point, where the obstacle is.
+            v = int(max(lj)) # Gets the maximum point, where the obstacle is.
 
             # The point to swerve is given by this.
             try:
-                cv2.circle(res, (int(s/n), int(len(res)/2)), int(len(res)/30), [255,0,255], -1)
+                cv2.circle(res, (m, v), int(len(res)/30), [255,0,255], -1)
             except:
                 pass
 
