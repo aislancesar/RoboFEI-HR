@@ -98,18 +98,6 @@ time.h
 MotionManager.h
 ../Control/Linux/include/MotionManager.h
 
-/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ActionMove.cpp
-iostream
--
-stdio.h
--
-unistd.h
--
-MotionManager.h
-/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/MotionManager.h
-ActionMove.hpp
-/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ActionMove.hpp
-
 /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ActionMove.hpp
 Action.h
 /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/Action.h
@@ -119,18 +107,6 @@ LinuxCM730.h
 /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/LinuxCM730.h
 blackboard.h
 -
-
-/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/GaitMove.cpp
-iostream
--
-stdio.h
--
-unistd.h
--
-MotionManager.h
-/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/MotionManager.h
-GaitMove.hpp
-/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/GaitMove.hpp
 
 /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/GaitMove.hpp
 Action.h
@@ -145,14 +121,6 @@ ReadConfig.hpp
 /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.hpp
 blackboard.h
 -
-
-/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.cpp
-iostream
--
-stdio.h
--
-ReadConfig.hpp
-/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.hpp
 
 /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/ReadConfig.hpp
 string
@@ -161,24 +129,6 @@ minIni.h
 /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/minIni.h
 Walking.h
 /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/Walking.h
-
-/home/fei/RoboFEI-HR/AI/Control/Linux/project/control/kbhit.cpp
-unistd.h
--
-iostream
--
-stdio.h
--
-termios.h
--
-unistd.h
--
-fcntl.h
--
-stdlib.h
--
-cstdlib
--
 
 /home/fei/RoboFEI-HR/AI/Control/Linux/project/control/main.cpp
 unistd.h
